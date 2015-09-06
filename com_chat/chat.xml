@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>chat</name>
+	 <creationDate>2014-03-05</creationDate>
+    <copyright>© 2014. Все права защищены.</copyright>
+    <license>Commercial</license>
+	<author>GlazyrinAndrey</author>
+	<authorEmail>glazyrin.andre@mail.ru</authorEmail>
+	<authorUrl>glazyrin.andre@mail.ru</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>1.01</version>
+	<description>Chat</description>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>chat.php</filename>
+		<filename>index.html</filename>
+		<filename>addfile.php</filename>
+		<filename>router.php</filename>
+		<filename>views/index.html</filename>
+		<filename>views/chat/index.html</filename>
+		<filename>views/chat/view.html.php</filename>
+		<filename>views/chat/tmpl/default.php</filename>
+		<filename>views/chat/tmpl/index.html</filename>
+		<filename>views/profile/index.html</filename>
+		<filename>views/profile/view.html.php</filename>
+		<filename>views/profile/tmpl/default.php</filename>
+		<filename>views/profile/tmpl/index.html</filename>
+		<folder>css</folder>
+		<folder>helper</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>uploads</folder>
+	</files>
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/chat.sql</file>
+		</sql>
+	</install>
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/chat_delete.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<menu>Chat</menu>
+		<files folder="admin">
+			<filename>chat.php</filename>
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<folder>views</folder>
+			<folder>sql</folder>
+		</files>  
+	</administration>
+</extension>
